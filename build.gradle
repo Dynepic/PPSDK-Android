@@ -6,7 +6,7 @@ buildscript {
         google()
         jcenter()
         maven {
-            url  "https://dynepic.bintray.com/PPSDK_Android"
+            url  "https://dynepic.bintray.com/maven"
             credentials {
                 username 'presadb'
                 password 'c8d68901f94373e759067a41279e9b5799d4ce77'
@@ -29,10 +29,4 @@ allprojects {
         google()
         jcenter()
     }
-    tasks.withType(Javadoc) {
-        options.addStringOption('Xdoclint:none', '-quiet')
-        options.addStringOption('encoding', 'UTF-8')
-    }
 }
-
-apply from: 'app/publish.gradle'
